@@ -1,12 +1,18 @@
+#include <Servo.h>
+
+Servo myServo; //servo variable
+const int buttonPin = 2;
+
 void setup() {
   // put your setup code here, to run once:
-  pinMode(12, OUTPUT);
+  pinMode(buttonPin, INPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(12, HIGH);
-  delay(1500);
-  digitalWrite(12, LOW);
-  delay(1000);
+  if (digitalRead(buttonpin) == HIGH){
+    myservo.write(180);
+  } else {
+  myservo.write(0);
+  }
 }
