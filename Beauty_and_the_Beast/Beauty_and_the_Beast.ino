@@ -1,16 +1,16 @@
 #include <Servo.h>
 
 Servo myservo; //servo variable
-//Servo myservo2;
+Servo myservo2;
 int pos = 0;
 const int buttonPin = 2;
-//const int buttonPin2 = 4;
+const int buttonPin2 = 4;
 const int servoPin = 12;
-//const int servoPin2 = 10;
+const int servoPin2 = 10;
 int buttonState = 0;
-//int buttonState2 = 0;
+int buttonState2 = 0;
 int previousButtonState;
-//int previousButtonState2;
+int previousButtonState2;
 
 
 unsigned long currentTime;
@@ -44,16 +44,16 @@ void loop() {
   }
   previousButtonState = buttonState;
 
-  //SCENE #3
-//  buttonState2 = digitalRead(buttonPin2);
+  SCENE #3
+  buttonState2 = digitalRead(buttonPin2);
   
-//  if (previousButtonState2 != buttonState2){
-//    //belle and beast will dance!
-//    if(buttonState2 == HIGH){
-//      myservo2.write(180);
-//    } else {
-//      myservo2.write(0);
-//    }
-//  }
-//  previousButtonState2 = buttonState2;
+  if (previousButtonState2 != buttonState2){
+    //belle and beast will dance!
+    if(buttonState2 == HIGH){
+      myservo2.write(180);
+    } else {
+      myservo2.write(0);
+    }
+  }
+  previousButtonState2 = buttonState2;
 }
