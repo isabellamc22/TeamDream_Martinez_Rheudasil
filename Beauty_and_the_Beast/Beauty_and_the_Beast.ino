@@ -2,14 +2,14 @@
 
 Servo myservo; //servo variable
 Servo myservo2
-const int buttonPin = 1;
-const int buttonPin2 = 2;
-const int buttonPin3 = 3;
+const int buttonPin = 2;
+const int buttonPin2 = 4;
+const int buttonPin3 = 6;
 
 void setup() {
   // put your setup code here, to run once:
-  myservo.attach(10);
-  myservo2.attach(9);
+  myservo.attach(12);
+  myservo2.attach(10);
   pinMode(buttonPin, INPUT);
   pinMode(buttonPin2, INPUT);
   pinMode(buttonPin3, INPUT);
