@@ -5,8 +5,8 @@ Servo myservo2;
 int pos = 0;
 const int buttonPin = 2;
 const int buttonPin2 = 4;
-const int servoPin = 12;
-const int servoPin2 = 10;
+const int servoPin = 10;
+const int servoPin2 = 12;
 int buttonState = 0;
 int buttonState2 = 0;
 int previousButtonState;
@@ -19,13 +19,13 @@ int timerLength = 2000;
 void setup() {
   // put your setup code here, to run once:
   myservo.attach(servoPin);
- // myservo2.attach(servoPin2);
+  myservo2.attach(servoPin2);
   myservo.write(0);
-  //myservo2.write(0);
+ myservo2.write(0);
   pinMode(buttonPin, INPUT);
- // pinMode(buttonPin2, INPUT);
+  pinMode(buttonPin2, INPUT);
   pinMode(servoPin, OUTPUT);
- // pinMode(servoPin2, OUTPUT);
+  pinMode(servoPin2, OUTPUT);
 }
 
 void loop() {
@@ -44,7 +44,7 @@ void loop() {
   }
   previousButtonState = buttonState;
 
-  SCENE #3
+  //  SCENE #3: ballroom scene
   buttonState2 = digitalRead(buttonPin2);
   
   if (previousButtonState2 != buttonState2){
