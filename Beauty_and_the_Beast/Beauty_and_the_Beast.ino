@@ -1,7 +1,16 @@
+/*
+Beauty and the Beast
+
+Team Name: Dream Team
+Team Members: Isabella Martinez and Maggie Rheudasil
+Description: In this program we used buttons that will activate servos to spin 180 degrees when pressed.
+*/
+
 #include <Servo.h>
 
-Servo myservo; //servo variable
-Servo myservo2;
+// VARIABLES
+Servo myservo; //scene one servo variable
+Servo myservo2; //scene two servo variable
 int pos = 0;
 const int buttonPin = 2;
 const int buttonPin2 = 4;
@@ -12,24 +21,24 @@ int buttonState2 = 0;
 int previousButtonState;
 int previousButtonState2;
 
-
 unsigned long currentTime;
 unsigned long previousTime = 0;
 int timerLength = 2000;
+
+// SETTING UP SERVO & BUTTON
 void setup() {
-  // put your setup code here, to run once:
-  myservo.attach(servoPin);
-  myservo2.attach(servoPin2);
+  myservo.attach(servoPin); // attaches the servo on pin 10 to the servo object
+  myservo2.attach(servoPin2); // attaches the servo on pin 12 to the servo object
   myservo.write(0);
- myservo2.write(0);
+  myservo2.write(0);
   pinMode(buttonPin, INPUT);
   pinMode(buttonPin2, INPUT);
   pinMode(servoPin, OUTPUT);
   pinMode(servoPin2, OUTPUT);
 }
 
+// LOGIC
 void loop() {
-  // put your main code here, to run repeatedly:
 
   // SCENE #1: belle approaching rose
   buttonState = digitalRead(buttonPin);
